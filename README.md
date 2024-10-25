@@ -10,7 +10,7 @@ Assignment - [Task](https://goatlys.notion.site/Task-Frontend-Developer-10cd57ef
 
 ## Live Demo
 
-[Function Calculator]()
+[Function Calculator](https://function-chain-calculator-inky.vercel.app/)
 
 ## How to use
 
