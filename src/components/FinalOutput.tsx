@@ -5,7 +5,7 @@ const OutputContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 7em;
+  margin-bottom: 10.2em;
 `;
 
 const OutputLabel = styled.h5`

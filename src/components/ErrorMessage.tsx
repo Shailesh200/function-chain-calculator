@@ -6,12 +6,13 @@ interface ErrorMessageProps {
 }
 
 const ErrorMessageContainer = styled.div`
-  margin-top: 20px;
+  margin: 0px auto 20px auto;
   background-color: #ffebeb;
   padding: 16px;
   border-radius: 8px;
   color: black;
   font-size: 16px;
+  width: 80%;
 `;
 
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ children }) => {

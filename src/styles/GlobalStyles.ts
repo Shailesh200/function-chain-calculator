@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
   .app-wrapper {
     display: flex;
     flex-direction: column;
+    margin-top: 4em;
 
     .assignment-heading {
       margin: 20px auto 30px auto;
@@ -33,16 +34,13 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 80%;
   }
 
   .function-chain {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: relative;
-    gap: 10px;
-    flex-wrap: wrap;
   }
 
   input[type="number"], input[type="text"] {

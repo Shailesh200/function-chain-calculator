@@ -11,6 +11,8 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 100px;
+  margin-bottom: 50px;
 `;
 
 const CardLabel = styled.h4`
@@ -33,6 +35,7 @@ const Input = styled.input`
   border-radius: 4px;
   width: 100%;
   margin-bottom: 16px;
+  z-index: 2 !important;
 `;
 
 const Dropdown = styled.select`
@@ -42,6 +45,13 @@ const Dropdown = styled.select`
   border-radius: 4px;
   background-color: #f5f5f5;
   cursor: not-allowed;  /* Disable interactivity */
+`;
+
+const InputOutputDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 3em 1em 3em;
+    font-size: 10px;
 `;
 
 interface FunctionCardProps {
@@ -63,7 +73,6 @@ const FunctionCard: React.FC<FunctionCardProps> = ({ label, nextFunctionLabel, o
         <Card>
             <CardLabel>
                 <DragIcon />
-
                 <span> {label}</span>
             </CardLabel>
             <CardSubHeading>Enter equation</CardSubHeading>
@@ -76,6 +85,11 @@ const FunctionCard: React.FC<FunctionCardProps> = ({ label, nextFunctionLabel, o
             <Dropdown disabled>
                 <option>{nextFunctionLabel}</option>
             </Dropdown>
+            {/* Adding Dummy Input / Output for visualization purpose only */}
+            <InputOutputDiv>
+                <span>Input</span>
+                <span>Output</span>
+            </InputOutputDiv>
         </Card>
     );
 };

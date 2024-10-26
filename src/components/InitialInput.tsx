@@ -5,7 +5,7 @@ const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 7em;
+  margin-bottom: 10.2em;
 `;
 
 const InitialLabel = styled.h5`

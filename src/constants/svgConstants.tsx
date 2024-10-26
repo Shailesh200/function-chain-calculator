@@ -11,42 +11,38 @@ export const DragIcon = () => (
     </svg>
 );
 
-export const PathFn1ToFn2 = () => (
-    <path
-        d="M 240,150 300,150"
-        stroke="#0066FF"
-        strokeOpacity="0.3"
-        strokeWidth="7"
-        strokeLinecap="round"
-    />
+export const SVGInitialToFn = () => (
+    <svg width="126" height="7" viewBox="0 0 126 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.93848 3.49976H85.6616H152.062" stroke="#0066FF" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" />
+    </svg>
 );
 
-export const PathFn2ToFn4 = () => (
-    <path
-        d="M 400,240 200,300"
-        stroke="#0066FF"
-        strokeOpacity="0.3"
-        strokeWidth="7"
-        strokeLinecap="round"
-    />
+export const SVGFn1ToFn2 = () => (
+    <svg width="193" height="48" viewBox="0 0 193 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 3.5C3.5 3.5 41.5 49.0727 103.5 44C165.5 38.9273 189.5 3.5 189.5 3.5" stroke="#0066FF" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" />
+    </svg>
 );
 
-export const PathFn4ToFn5 = () => (
-    <path
-        d="M 240,450 300,450"
-        stroke="#0066FF"
-        strokeOpacity="0.3"
-        strokeWidth="7"
-        strokeLinecap="round"
-    />
+export const SVGFn2ToFn4 = () => (
+    <svg width="360" height="310" viewBox="0 0 360 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M357 3C357 3 341.276 191.119 218 208.5C111.936 223.454 128.246 299.907 4 306.5" stroke="#0066FF" stroke-opacity="0.31" stroke-width="7" stroke-linecap="round" />
+    </svg>
 );
 
-export const PathFn5ToFn3 = () => (
-    <path
-        d="M 520,320 620,240"
-        stroke="#0066FF"
-        strokeOpacity="0.3"
-        strokeWidth="7"
-        strokeLinecap="round"
-    />
-)
+export const SVGFn4ToFn5 = () => (
+    <svg width="193" height="48" viewBox="0 0 193 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 3.5C3.5 3.5 41.5 49.0727 103.5 44C165.5 38.9273 189.5 3.5 189.5 3.5" stroke="#0066FF" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" />
+    </svg>
+);
+
+export const SVGFn5ToFn3 = () => (
+    <svg width="56" height="292" viewBox="0 0 56 292" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 2.80005C3.5 2.80005 52.4999 49.2 52.5 145.2C52.5001 241.2 17.5001 289.2 17.5001 289.2" stroke="#0066FF" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" />
+    </svg>
+);
+
+export const SVGEndOfChain = () => (
+    <svg width="214" height="7" viewBox="0 0 214 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.38452 3.49976H117.615H209.615" stroke="#0066FF" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" />
+    </svg>
+);

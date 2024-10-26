@@ -8,23 +8,25 @@ import ErrorMessage from './ErrorMessage';
 
 import { applyFunction } from '../utils/functionUtils';
 import { FUNCTION_ORDER } from '../constants/functionConstant';
-import { PathFn1ToFn2, PathFn2ToFn4, PathFn4ToFn5, PathFn5ToFn3 } from '../constants/svgConstants';
+import { SVGEndOfChain, SVGFn1ToFn2, SVGFn2ToFn4, SVGFn4ToFn5, SVGFn5ToFn3, SVGInitialToFn } from '../constants/svgConstants';
 
 const ChainContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 250px);
-  grid-template-rows: repeat(2, 250px);
-  grid-gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: center;
-  width: 72%;
+  width: 80%;
 `;
 
-const SvgContainer = styled.svg`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+interface SVGProps {
+    left: string;
+    top: string;
+}
+
+const SvgWrapper = styled.div<SVGProps>`
+    position: absolute;
+    left: ${props => props.left}px;
+    top:${props => props.top}px;
 `;
 
 const FunctionChain: React.FC = () => {
@@ -89,20 +91,30 @@ const FunctionChain: React.FC = () => {
                         onInputChange={(input) => handleFunctionChange(4, input)}
                     />
                     {/* SVG paths connecting the function cards */}
-                    <SvgContainer xmlns="http://www.w3.org/2000/svg">
+                    {/* Using SVG instead of CSS lines as the overlay for lines is linked to the cards */}
+                    <SvgWrapper left="-30" top="225">
+                        <SVGInitialToFn />
+                    </SvgWrapper>
 
-                        {/* Path from Function 1 to Function 2 */}
-                        <PathFn1ToFn2 />
+                    <SvgWrapper left="255" top="230">
+                        <SVGFn1ToFn2 />
+                    </SvgWrapper>
 
-                        {/* Path from Function 2 to Function 4 */}
-                        <PathFn2ToFn4 />
+                    <SvgWrapper left="260" top="230">
+                        <SVGFn2ToFn4 />
+                    </SvgWrapper>
 
-                        {/* Path from Function 4 to Function 5 */}
-                        <PathFn4ToFn5 />
+                    <SvgWrapper left="425" top="530">
+                        <SVGFn4ToFn5 />
+                    </SvgWrapper>
 
-                        {/* Path from Function 5 to Function 3 */}
-                        <PathFn5ToFn3 />
-                    </SvgContainer>
+                    <SvgWrapper left="775" top="230">
+                        <SVGFn5ToFn3 />
+                    </SvgWrapper>
+
+                    <SvgWrapper left="960" top="225">
+                        <SVGEndOfChain />
+                    </SvgWrapper>
                 </ChainContainer>
                 <FinalOutput result={result} />
             </div>
